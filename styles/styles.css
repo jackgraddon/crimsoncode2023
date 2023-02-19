@@ -1,0 +1,105 @@
+:root {
+    --jet: rgb(30, 26, 25);
+    --antique-white: rgb(255, 242, 222);
+    --salmon: rgb(241, 145, 119);
+    --burnt-sienna: rgb(173, 69, 43);
+    --glaucous: rgb(119, 115, 171);
+    --ultra-violet: rgb(78, 76, 111);
+}
+
+/* Fonts */
+body {
+    font-family: 'Space Grotesk', sans-serif !important; 
+}
+/* Background Image */
+div.bg-image {
+    background-image: url('https://cdn.wallpapersafari.com/35/78/gyIT3n.jpg');
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Focus Styles */
+*:focus {
+    outline: none;
+}
+input, button, select, textarea {
+    transition: 300ms all;
+}
+input:focus, button:focus, select:focus, textarea:focus {
+    outline: var(--burnt-sienna) solid 5px !important;
+    transition: 300ms all;
+}
+
+/* Link Styles */
+a {
+    color: var(--salmon);
+    text-decoration: none;
+    transition: 300ms all;
+}
+a:hover, a:focus {
+    color: var(--burnt-sienna);
+    text-decoration: underline;
+}
+
+/* Override Bootstrap Colors */
+body {
+    background-color: var(--jet);
+    color: var(--antique-white);
+}
+p, h1, h2, h3, h4, h5, h6, a, li, span, small, label, input, button, select, textarea {
+    color: var(--antique-white);
+}
+
+.btn-primary {
+    background-color: var(--salmon);
+    border-color: var(--salmon);
+    color: var(--antique-white);
+    transition: 300ms all;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
+    background-color: var(--burnt-sienna) !important;
+    border-color: var(--burnt-sienna) !important;
+    color: var(--antique-white) !important;
+    transition: 300ms all;
+}
+
+.btn-secondary {
+    background-color: var(--glaucous);
+    border-color: var(--glaucous);
+    color: var(--antique-white);
+    transition: 300ms all;
+}
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .show > .btn-secondary.dropdown-toggle {
+    background-color: var(--ultra-violet) !important;
+    border-color: var(--ultra-violet) !important;
+    color: var(--antique-white) !important;
+    transition: 300ms all;
+}
+.form-control, .form-check-input, .form-select, input[type="checkbox"], input[type="radio"] {
+    background-color: var(--glaucous) !important;
+    border-color: var(--antique-white) !important;
+    color: var(--antique-white) !important;
+    transition: 300ms all;
+}
+
+/* Additional Styles */
+.form-check {
+    margin-left: 1rem;
+}
+input[type="button"] {
+    margin-top: 0.5rem;
+}
+.accordion-body ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.accordion-body ul li label {
+    margin-bottom: 0.5rem;
+    padding-left: 0.25rem;
+}

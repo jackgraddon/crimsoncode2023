@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | LaunchPad</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!-- Personal Styles -->
+    <link rel="stylesheet" href="../styles/styles.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body data-bs-theme="dark">
+    <!-- Form Page -->
+    <main class="container">
+        <div class="d-flex flex-column justify-content-center align-items-start" style="height: 100vh">
+            <script>
+                // Get height of page
+                var height = window.innerHeight;
+                // Set height of form page
+                document.querySelector("main").style.height = height + "px";
+            </script>
+            <section id="lets-go">
+                <h1>Welcome to LaunchPad!</h1>
+                <p class="lead">We're happy you are here. Let's get started with some basic info.</p>
+                <input type="button" class="btn btn-primary" onclick="checkForm()" value="Continue">
+                <p class="text-muted mt-4 ">Completing this form will overwrite any previous data you saved!</p>
+            </section>
+            <form class="needs-validation">
+                <!-- Get Personal Information -->
+                <section id="yourself" class="visually-hidden">
+                    <div class="row">
+                        <h3 class="col">Personal Info</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="name-first" placeholder="John" required>
+                                <label for="name-first">First Name</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="name-last" placeholder="Doe" required>
+                                <label for="name-last">Last Name</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="button" class="btn btn-primary" onclick="checkForm()" value="Continue">
+                        </div>
+                    </div>
+                </section>
+                <section id="your-university" class="visually-hidden">
+                    <div class="row">
+                        <h3 class="col">What university do you plan to attend?</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="university" placeholder="Washington State University">
+                                <label for="university">University</label>
+                            </div>
+                        </div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="button" class="btn btn-primary" onclick="checkForm()" value="Continue">
+                        </div>
+                    </div>
+                </section>
+                <section id="your-major" class="visually-hidden">
+                    <div class="row">
+                        <h3 class="col">What is your major?</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="major" placeholder="Computer Science">
+                                <label for="major">Major</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="button" class="btn btn-primary" onclick="checkForm()" value="Continue">
+                        </div>
+                    </div>
+                </section>
+                <section id="next-steps" class="visually-hidden">
+                    <div class="row">
+                        <h3 class="col">Let's figure out what you need.</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="lead">We're almost done! Just a few more questions.</p>
+                            <input type="button" class="btn btn-primary" onclick="checkForm()" value="Continue">
+                        </div>
+                    </div>
+                </section>
+                <section id="living-location" class="visually-hidden">
+                    <div class="row">
+                        <h3 class="col">What will be your living situation?</h3>
+                    </div>
+                    <div class="row">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="living-location" id="dorm">
+                            <label class="form-check-label" for="dorm">
+                                Dorm
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="living-location" id="apartment">
+                            <label class="form-check-label" for="apartment">
+                                Apartment/House
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="living-location" id="home">
+                            <label class="form-check-label" for="home">
+                                Staying Home
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="button" class="btn btn-primary" onclick="checkForm()" value="Continue">
+                        </div>
+                    </div>
+                </section>
+                <section id="living-movein" class="visually-hidden">
+                    <div class="row">
+                        <h3 class="col">When do you move in?</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-floating mb-3">
+                                <input type="date" class="form-control" name="living-movein" id="movein-date" placeholder="">
+                                <label for="movein-date">Move-in Date</label>
+                            </div>
+                            <script>
+                                // Get current date
+                                var today = new Date();
+                                // Format the date
+                                var formattedDate = today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
+                                // Set the min date
+                                document.getElementById("movein-date").setAttribute("min", formattedDate);
+                                // Add six months to the date
+                                var sixMonths = new Date(today.getFullYear(), today.getMonth() + 6, today.getDate());
+                                // Format the date
+                                var formattedPlaceholderDate = sixMonths.getFullYear() + "-" + (sixMonths.getMonth() + 1) + "-" + sixMonths.getDate();
+                                // Set the placeholder
+                                document.getElementById("movein-date").setAttribute("placeholder", formattedPlaceholderDate);
+                            </script>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="button" class="btn btn-primary" onclick="checkForm()" value="Continue">
+                        </div>
+                    </div>
+                </section>
+                <section id="living-roommate" class="visually-hidden">
+                    <div class="row">
+                        <h3 class="col">Will you be living alone?</h3>
+                    </div>
+                    <div class="row">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="living-roommate" id="yes-roommate">
+                            <label class="form-check-label" for="yes-roommate">
+                                No
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="living-roommate" id="no-roommate">
+                            <label class="form-check-label" for="no-roommate">
+                                Yes
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="button" class="btn btn-primary" onclick="checkForm()" value="Continue">
+                        </div>
+                    </div>
+                </section>
+                <section id="living-car" class="visually-hidden">
+                    <div class="row">
+                        <h3 class="col">Are you planning to bring a car?</h3>
+                    </div>
+                    <div class="row">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="living-car" id="yes-car">
+                            <label class="form-check-label" for="yes-car">
+                                No
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="living-car" id="no-car">
+                            <label class="form-check-label" for="no-car">
+                                Yes
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="button" class="btn btn-primary" onclick="checkForm()" value="Continue">
+                        </div>
+                    </div>
+                </section>
+                <section id="living-food" class="visually-hidden">
+                    <div class="row">
+                        <h3 class="col">What do think your food plan will look like?</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <select class="form-select mb-3" name="living-food" id="food-plan" aria-label="Select a food plan">
+                                <option selected disabled value="">Select a food plan</option>
+                                <option value="1">School Meal Plan</option>
+                                <option value="2">Personal Shopping</option>
+                                <option value="3">All of the Above</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="button" class="btn btn-primary" onclick="checkForm()" value="Continue">
+                        </div>
+                    </div>
+                </section>
+                <section id="living-weather" class="visually-hidden">
+                    <div class="row">
+                        <h3 class="col">What is the weather like where you are going?</h3>
+                        <p>Check all that apply.</p>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-check">
+                                <input class="form-check-input" name="living-weather" type="checkbox" id="weather-sun">
+                                <label class="form-check-label" for="weather-sun">
+                                    <i class="bi bi-sun-fill"></i> Sunny
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" name="living-weather" type="checkbox" id="weather-rain">
+                                <label class="form-check-label" for="weather-rain">
+                                    <i class="bi bi-cloud-rain-heavy-fill"></i> Rainy
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" name="living-weather" type="checkbox" id="weather-snow">
+                                <label class="form-check-label" for="weather-snow">
+                                    <i class="bi bi-cloud-snow-fill"></i> Snowy
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" name="living-weather" type="checkbox" id="weather-wind">
+                                <label class="form-check-label" for="weather-wind">
+                                    <i class="bi bi-wind"></i> Windy
+                                </label>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="button" class="btn btn-primary" onclick="checkForm()" value="Continue">
+                        </div>
+                    </div>
+                </section>
+
+                <script>
+                    // On change of living conditions, show/hide roommate question
+                    var livingConditions = document.querySelectorAll('input[name="living-location"]');
+                    for (var i = 0; i < livingConditions.length; i++) {
+                        livingConditions[i].addEventListener('change', function() {
+                            if (this.id == "home") {
+                                document.querySelector("#living-roommate").classList.add("skip");
+                                document.querySelector("#living-movein").classList.add("skip");
+                                document.querySelector("#living-car").classList.add("skip");
+                                document.querySelector("#living-food").classList.add("skip");
+                                document.querySelector("#living-weather").classList.add("skip");
+                            } else {
+                                document.querySelector("#living-roommate").classList.remove("skip");
+                                document.querySelector("#living-movein").classList.remove("skip");
+                                document.querySelector("#living-car").classList.remove("skip");
+                                document.querySelector("#living-food").classList.remove("skip");
+                                document.querySelector("#living-weather").classList.remove("skip");
+                            }
+                        });
+                    }
+                </script>
+
+                <section id="submit" class="visually-hidden">
+                    <div class="row">
+                        <div class="col">
+                            <h3>Awesome!</h3>
+                            <p class="lead">Let's get your personalized plan in motion!</p>
+                            <input type="button" class="btn btn-primary" id="submit" value="Submit" onclick="javascript:writeData()">
+                        </div>
+                    </div>
+                </section>
+            </form>
+        </div>
+    </main> 
+</body>
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" type="text/javascript"></script>
+
+<!-- JS Cookie -->
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+
+<!-- Form Scripts -->
+<script>
+    // Form Page
+const formElements = {
+    page: document.querySelector('main'),
+    sections: [{
+            // 0
+            container: document.querySelector('section#lets-go'),
+            required: []
+        },
+        {
+            // 1
+            container: document.querySelector('section#yourself'),
+            required: [
+                document.querySelector('#name-first'),
+                document.querySelector('#name-last')
+            ]
+        },
+        {
+            // 2
+            container: document.querySelector('section#your-university'),
+            required: [
+                document.querySelector('#university')
+            ]
+        },
+        {
+            // 3
+            container: document.querySelector('section#your-major'),
+            required: [
+                document.querySelector('#major')
+            ]
+        },
+        {
+            // 4
+            container: document.querySelector('section#next-steps'),
+            required: []
+        },
+        {
+            // 5
+            container: document.querySelector('section#living-location'),
+            required: [
+                document.querySelectorAll('section#living-location input'),
+            ]
+        },
+        {
+            // 6
+            container: document.querySelector('section#living-movein'),
+            required: [
+                document.querySelector('input[name="living-movein"]'),
+            ]
+        },
+        {
+            // 7
+            container: document.querySelector('section#living-roommate'),
+            required: [
+                document.querySelectorAll('section#living-roommate input'),
+            ]
+        },
+        {
+            // 8
+            container: document.querySelector('section#living-car'),
+            required: [
+                document.querySelectorAll('section#living-car input'),
+            ]
+        },
+        {
+            // 9
+            container: document.querySelector('section#living-food'),
+            required: [
+                document.querySelectorAll('section#living-food input'),
+            ]
+        },
+        {
+            // 10
+            container: document.querySelector('section#living-weather'),
+            required: [
+                document.querySelectorAll('section#living-weather input'),
+            ]
+        },
+        {
+            // 
+            container: document.querySelector('#submit'),
+            required: [0]
+        }
+    ],
+    buttons: document.querySelectorAll('button'),
+}
+
+// Place focus on first input
+formElements.sections[0].container.querySelectorAll('input')[0].focus();
+
+// Form Navigation Function
+let formTracker = {
+    previous: 0,
+    current: 0,
+    next: 1
+};
+
+// Log Form Tracker
+console.log("On load", formTracker);
+
+function checkForm() {
+    // Check if form elements that are required to be filled out are filled out on current section
+    for (let i = 0; i < formElements.sections[formTracker.current].required.length; i++) {
+        if (formElements.sections[formTracker.current].required[i].value == "") {
+            // If not, return
+            return;
+        } else {
+            // Check if element is filled out correctly
+            if(formElements.sections[formTracker.current].required[i].type == "radio") {
+                // Check if any radio button is selected
+                let radioButtons = formElements.sections[formTracker.current].required;
+                let radioSelected = false;
+                for (let j = 0; j < radioButtons.length; j++) {
+                    if (radioButtons[j].checked) {
+                        radioSelected = true;
+                    }
+                }
+                if (!radioSelected) {
+                    // If not, return
+                    return;
+                }
+            }
+            else if(formElements.sections[formTracker.current].required[i].type == "checkbox") {
+                // Check if any checkbox is selected
+                let checkboxes = formElements.sections[formTracker.current].required;
+                let checkboxSelected = false;
+                for (let j = 0; j < checkboxes.length; j++) {
+                    if (checkboxes[j].checked) {
+                        checkboxSelected = true;
+                    }
+                }
+                if (!checkboxSelected) {
+                    // If not, return
+                    return;
+                }
+            }
+        }
+    }
+    // If next element is skippable, skip it
+    if (formElements.sections[formTracker.next].container.classList.contains("skip")) {
+        // check if there are skippable elements after the next element 
+        formTracker.next++;
+        while (formElements.sections[formTracker.next].container.classList.contains("skip")) {
+            console.log(formElements.sections[formTracker.next].container);
+            formTracker.next++;
+        }
+    }
+    continueForm();
+    return;
+}
+
+function continueForm() {
+    // Log Form Tracker
+    // console.log("Before running", formTracker);
+
+    // Play transition animations
+    gsap.to(formElements.sections[formTracker.current].container, {
+        duration: 0.5,
+        opacity: 0,
+        y: -50,
+        ease: "power2.in",
+        onComplete: function() {
+            // Hide current section
+            formElements.sections[formTracker.current].container.classList.add('visually-hidden');
+            // Show next section
+            formElements.sections[formTracker.next].container.classList.remove('visually-hidden');
+
+            // Play transition animations
+            gsap.from(formElements.sections[formTracker.next].container, {
+                duration: 0.5,
+                opacity: 0,
+                y: 50,
+                ease: "power2.out",
+                onComplete: function() {
+                    // Place focus on first input
+                    formElements.sections[formTracker.next].container.querySelectorAll('input')[0].focus();
+
+                    // If current section was the starting section
+                    if (formTracker.current == 0) {
+                        formTracker.previous--;
+                    }
+                    // If current section is the last section
+                    else if (formTracker.current == formElements.sections.length) {
+                        formTracker.next--;
+                    }
+
+                    // Update Form Tracker
+                    formTracker.previous++;
+                    formTracker.current++;
+                    formTracker.next++;
+
+                    // Log Form Tracker
+                    // console.log("After running",formTracker);
+                }
+            });
+        }
+    });
+}
+let formData;
+
+function writeData() {
+    // Write data to database
+    console.log("Writing data to database");
+
+    formData = document.querySelector('form').elements;
+
+    // Get personal data
+    Cookies.set("first_name", formData[0].value, { expires: 365 });
+    console.log(formData[0].value, { expires: 365 });
+    Cookies.set("last_name", formData[1].value, { expires: 365 });
+    Cookies.set("university", formData[3].value, { expires: 365 });
+    Cookies.set("major", formData[5].value, { expires: 365 });
+
+    // Get living location data
+    let livingLocation = "";
+    for (let i = 8; i < 11; i++) {
+        if (formData[i].checked) {
+            livingLocation = formData[i].id;
+        }
+    }
+    Cookies.set("living_location", livingLocation, { expires: 365 });
+
+    // Get living move-in data
+    Cookies.set("living_movein", formData[12].valueAsDate, { expires: 365 });
+
+    // Get living roommate data
+    let livingRoommate = "";
+    for (let i = 14; i < 16; i++) {
+        if (formData[i].checked) {
+            livingRoommate = formData[i].id;
+        }
+    }
+    Cookies.set("living_roommate", livingRoommate, { expires: 365 });
+
+    // Get living car data
+    let livingCar = "";
+    for (let i = 17; i < 19; i++) {
+        if (formData[i].checked) {
+            livingCar = formData[i].id;
+        }
+    }
+    Cookies.set("living_car", livingCar, { expires: 365 });
+
+    // Get living food data
+    Cookies.set("living_food", formData[20].value, { expires: 365 });
+
+    // Get living weather data
+    Cookies.set("living_weather_sunny", formData[22].checked, { expires: 365 });
+    Cookies.set("living_weather_rainy", formData[23].checked, { expires: 365 });
+    Cookies.set("living_weather_snowy", formData[24].checked, { expires: 365 });
+    Cookies.set("living_weather_windy", formData[25].checked, { expires: 365 });
+
+    // Create checklist cookies
+    let currentDate = new Date();
+    // let new Date(formData[12].valueAsDate) = new Date(formData[12].valueAsDate);
+    let timeBefore = {
+        sixMonths: new Date(new Date(formData[12].valueAsDate).setMonth(new Date(formData[12].valueAsDate).getMonth() - 6)),
+        fiveMonths: new Date(new Date(formData[12].valueAsDate).setMonth(new Date(formData[12].valueAsDate).getMonth() - 5)),
+        fourMonths: new Date(new Date(formData[12].valueAsDate).setMonth(new Date(formData[12].valueAsDate).getMonth() - 4)),
+        threeMonths: new Date(new Date(formData[12].valueAsDate).setMonth(new Date(formData[12].valueAsDate).getMonth() - 3)),
+        twoMonths: new Date(new Date(formData[12].valueAsDate).setMonth(new Date(formData[12].valueAsDate).getMonth() - 2)),
+        oneMonth: new Date(new Date(formData[12].valueAsDate).setMonth(new Date(formData[12].valueAsDate).getMonth() - 1)),
+        threeWeeks: new Date(new Date(formData[12].valueAsDate).setDate(new Date(formData[12].valueAsDate).getDate() - 21)),
+        twoWeeks: new Date(new Date(formData[12].valueAsDate).setDate(new Date(formData[12].valueAsDate).getDate() - 14)),
+        oneWeek: new Date(new Date(formData[12].valueAsDate).setDate(new Date(formData[12].valueAsDate).getDate() - 7)),
+        threeDays: new Date(new Date(formData[12].valueAsDate).setDate(new Date(formData[12].valueAsDate).getDate() - 3)),
+    }
+
+    Cookies.set("check_bed_size", `{"status": "incomplete", "date": "${timeBefore.threeMonths}"}`, { expires: 365 });
+    // only if living location is apartment
+    if (livingLocation == "apartment" || livingLocation == "house") {
+        Cookies.set("check_apt_furnished", `{"status": "incomplete", "date": "${timeBefore.fourMonths}"}`, { expires: 365 });
+        Cookies.set("check_furniture_delivery", `{"status": "incomplete", "date": "${timeBefore.threeMonths}"}`, { expires: 365 });
+        Cookies.set("buy_furniture", `{"status": "incomplete", "date": "${timeBefore.oneMonth}"}`, { expires: 365 });
+    } else {
+        Cookies.set("check_apt_furnished", `{"status": "unrelated", "date": "${timeBefore.fourMonths}"}`, { expires: 365 });
+        Cookies.set("check_furniture_delivery", `{"status": "unrelated", "date": "${timeBefore.threeMonths}"}`, { expires: 365 });
+        Cookies.set("buy_furniture", `{"status": "unrelated", "date": "${timeBefore.oneMonth}"}`, { expires: 365 });
+    }
+    Cookies.set("check_package_delivery", `{"status": "incomplete", "date": "${timeBefore.threeMonths}"}`, { expires: 365 });
+    // only if you have a car
+    if (livingCar == "yes") {
+        Cookies.set("check_parking_info", `{"status": "incomplete", "date": "${timeBefore.sixMonths}"}`, { expires: 365 });
+        Cookies.set("buy_parking", `{"status": "incomplete", "date": "${timeBefore.fiveMonths}"}`, { expires: 365 });
+    } else {
+        Cookies.set("check_parking_info", `{"status": "unrelated", "date": "${timeBefore.sixMonths}"}`, { expires: 365 });
+        Cookies.set("buy_parking", `{"status": "unrelated", "date": "${timeBefore.fiveMonths}"}`, { expires: 365 });
+    }
+    Cookies.set("check_supply_list", `{"status": "incomplete", "date": "${timeBefore.twoWeeks}"}`, { expires: 365 });
+    Cookies.set("check_scholarhips", `{"status": "incomplete", "date": "${timeBefore.sixMonths}"}`, { expires: 365 });
+    Cookies.set("buy_bedding", `{"status": "incomplete", "date": "${timeBefore.twoMonths}"}`, { expires: 365 });
+    Cookies.set("buy_school_supplies", `{"status": "incomplete", "date": "${timeBefore.twoWeeks}"}`, { expires: 365 });
+    Cookies.set("buy_storage", `{"status": "incomplete", "date": "${timeBefore.twoWeeks}"}`, { expires: 365 });
+    Cookies.set("buy_decorations", `{"status": "incomplete", "date": "${timeBefore.twoWeeks}"}`, { expires: 365 });
+    Cookies.set("buy_kitchen_supplies", `{"status": "incomplete", "date": "${timeBefore.twoMonths}"}`, { expires: 365 });
+    // only if weather is snowy
+    if (formData[24].checked) {
+        Cookies.set("buy_winter_coat", `{"status": "incomplete", "date": "${timeBefore.threeWeeks}"}`, { expires: 365 });
+        Cookies.set("buy_snow_pants", `{"status": "incomplete", "date": "${timeBefore.threeWeeks}"}`, { expires: 365 });
+        Cookies.set("buy_gloves", `{"status": "incomplete", "date": "${timeBefore.threeWeeks}"}`, { expires: 365 });
+    } else {
+        Cookies.set("buy_winter_coat", `{"status": "unrelated", "date": "${timeBefore.threeWeeks}"}`, { expires: 365 });
+        Cookies.set("buy_snow_pants", `{"status": "unrelated", "date": "${timeBefore.threeWeeks}"}`, { expires: 365 });
+        Cookies.set("buy_gloves", `{"status": "unrelated", "date": "${timeBefore.threeWeeks}"}`, { expires: 365 });
+    }
+    Cookies.set("pack_school_clothes", `{"status": "incomplete", "date": "${timeBefore.oneWeek}"}`, { expires: 365 });
+    Cookies.set("pack_formal_clothes", `{"status": "incomplete", "date": "${timeBefore.oneWeek}"}`, { expires: 365 });
+    Cookies.set("pack_light_clothes", `{"status": "incomplete", "date": "${timeBefore.oneWeek}"}`, { expires: 365 });
+
+    // only if weather is sunny
+    if (formData[22].checked) {
+        Cookies.set("pack_sunscreen", `{"status": "incomplete", "date": "${timeBefore.threeDays}"}`, { expires: 365 });
+        Cookies.set("pack_hat", `{"status": "incomplete", "date": "${timeBefore.threeDays}"}`, { expires: 365 });
+        Cookies.set("pack_sunglasses",`{"status": "incomplete", "date": "${timeBefore.threeDays}"}`, { expires: 365 });
+        Cookies.set("pack_sandals",`{"status": "incomplete", "date": "${timeBefore.threeDays}"}`, { expires: 365 });
+
+    } else {
+        Cookies.set("pack_sunscreen", `{"status": "unrelated", "date": "${timeBefore.threeDays}"}`, { expires: 365 });
+        Cookies.set("pack_hat", `{"status": "unrelated", "date": "${timeBefore.threeDays}"}`, { expires: 365 });
+        Cookies.set("pack_sunglasses", `{"status": "unrelated", "date": "${timeBefore.threeDays}"}`, { expires: 365 });
+        Cookies.set("pack_sandals", `{"status": "unrelated", "date": "${timeBefore.threeDays}"}`, { expires: 365 });
+    }
+    Cookies.set("pack_jacket", `{"status": "incomplete", "date": "${timeBefore.oneWeek}"}`, { expires: 365 });
+    Cookies.set("pack_boots", `{"status": "incomplete", "date": "${timeBefore.oneWeek}"}`, { expires: 365 });
+    Cookies.set("pack_backpack", `{"status": "incomplete", "date": "${timeBefore.threeDays}"}`, { expires: 365 });
+    Cookies.set("pack_appliances", `{"status": "incomplete", "date": "${timeBefore.threeDays}"}`, { expires: 365 });
+    Cookies.set("register_classes", `{"status": "incomplete", "date": "${timeBefore.twoMonths}"}`, { expires: 365 });
+    Cookies.set("pay_tuition/fees", `{"status": "incomplete", "date": "${timeBefore.oneWeek}"}`, { expires: 365 });
+
+    // only if you have a roommate
+    if (livingRoommate == "yes") {
+        Cookies.set("contact_roommate", `{"status": "incomplete", "date": "${timeBefore.fiveMonths}"}`, { expires: 365 });
+        Cookies.set("meet_roommate", `{"status": "incomplete", "date": "${timeBefore.oneMonth}"}`, { expires: 365 });
+    } else {
+        Cookies.set("contact_roommate", `{"status": "unrelated", "date": "${timeBefore.fiveMonths}"}`, { expires: 365 });
+        Cookies.set("meet_roommate", `{"status": "unrelated", "date": "${timeBefore.oneMonth}"}`, { expires: 365 });
+    }
+    // only if food is not provided
+    if (formData[20].value != '1') {
+        Cookies.set("budget_food", `{"status": "unrelated", "date": "${timeBefore.oneMonth}"}`, { expires: 365 });
+    } else {
+        Cookies.set("budget_food", `{"status": "incomplete", "date": "${timeBefore.oneMonth}"}`, { expires: 365 });
+    }
+    Cookies.set("budget_living_expenses", `{"status": "incomplete", "date": "${timeBefore.oneMonth}"}`, { expires: 365 });
+
+    // navigate to dashboard
+    window.location.href = "../dashboard/";
+}
+
+    // Grab Enter event on form
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+    });
+
+    // document.querySelector('input#submit').addEventListener('click', writeData(document.querySelector("form").elements));
+</script>
+</html>
