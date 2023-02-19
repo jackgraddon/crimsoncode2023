@@ -1,12 +1,18 @@
 # Crimson Code 2023
 
-Repo for the Crimson Code Hackathon (2023)
+## Team
+Binary Bandits
 
-[Click Here](https://prod.liveshare.vsengsaas.visualstudio.com/join?9B0C83F6620793218DCB5EE487D55FD7CEE1) to join the VSCode workspace.
+## Project
+Our project is a website that helps future college students plan out their path to their college experience.
 
-## Local Server
+## View Site
 
-http://172.19.233.112:5500
+https://jackgraddon.github.io/crimsoncode2023/
+
+## Issues
+- When marking items as completed, refreshing will show them as incomplete (even if browser storage has them saved as complete)
+- Time sorting seems to be a bit buggy, but not sure what is wrong.
 
 ## Bootstrap
 
