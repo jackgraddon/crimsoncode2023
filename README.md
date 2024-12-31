@@ -7,11 +7,8 @@ After you've filled out the survey, you'll have a personalized checklist that wi
 
 All of the data you enter is stored locally on your computer, which means we do not have access to it! You can also export a copy of your data for your personal use.
 
-## View Site
-https://jackgraddon.github.io/crimsoncode2023/
-
-## DevPost
-View our project on [DevPost](https://devpost.com/software/launchpad-n5hmqw).
+## Links
+You can [view our demo site here](https://jackgraddon.github.io/crimsoncode2023/), and view our project on [DevPost](https://devpost.com/software/launchpad-n5hmqw).
 
 ## Issues
 - When marking items as completed, refreshing will show them as incomplete (even if browser storage has them saved as complete)
