@@ -1,7 +1,7 @@
 {
   "id": "230201",
-  "name": "Launchpad - Crimson Code 2023",
-  "description": "A website that helps future college students plan out their path to their college experience. Developed for the WSU Hackathon 'Crimson Code' in 2023.",
+  "name": "Launchpad",
+  "description": "Crimson Code 2023 Project",
   "url": "crimsoncode2023/main/README.md",
   "backgroundColor": "rgb(33, 37, 41)",
   "buttonColor": "rgb(255, 242, 222)",
